@@ -1,0 +1,336 @@
+2021-11-30 13:46:09,052 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:46:10,582 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 2.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:46:13,132 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 4.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:46:17,691 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 8.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:46:26,270 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 16.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:46:42,851 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 32.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:47:15,432 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 64.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:48:03,574 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:48:05,109 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 2.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:48:07,674 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 4.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:48:12,153 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 8.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:48:20,651 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 16.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:48:37,190 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 32.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:49:09,708 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 64.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:50:14,226 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 128.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]
+2021-11-30 13:52:22,784 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 256.0 seconds
+Traceback (most recent call last):
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection_handler.py", line 59, in _create_connection
+    async with self.conn.connect() as connection:
+  File "C:\Java\Python38\lib\contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 94, in connect
+    await self._open()
+  File "C:\Java\Python38\lib\site-packages\cryptofeed\connection.py", line 304, in _open
+    self.conn = await websockets.connect(self.address, **self.ws_kwargs)
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 649, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+  File "C:\Java\Python38\lib\asyncio\tasks.py", line 491, in wait_for
+    return fut.result()
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 660, in __await_impl__
+    await protocol.handshake(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 331, in handshake
+    self.extensions = self.process_extensions(
+  File "C:\Java\Python38\lib\site-packages\websockets\legacy\client.py", line 220, in process_extensions
+    raise NegotiationError(
+websockets.exceptions.NegotiationError: Unsupported extension: name = permessage-deflate, params = [('server_no_context_takeover', None), ('client_no_context_takeover', None)]

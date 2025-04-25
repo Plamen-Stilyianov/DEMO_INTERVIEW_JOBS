@@ -1,0 +1,110 @@
+# Given a words.txt file containing a newline-delimited list of dictionary
+# words, please implement the Anagrams class so that the get_anagrams() method
+# returns all anagrams from words.txt for a given word.
+#
+# Requirements:
+#   - Optimise the code for fast retrieval
+#   - Write more tests
+#   - Thread safe implementation
+
+import threading
+import unittest
+from concurrent.futures import ThreadPoolExecutor
+from unittest.mock import patch, mock_open
+
+
+class Anagrams:
+    """ Anagram class """
+
+    def __init__(self):
+        self.file = 'words.txt'
+        self.words = self._get_words()
+        self.lock = threading.RLock()
+
+    def _get_words(self):
+        """ Method which read a file and returns sorted tuple container by word length.
+            Private thread-safe method which runs in its own thread during initialization of the class instance
+            There is a cost of the sorting by length
+        """
+        try:
+            with ThreadPoolExecutor(max_workers=2) as executor:
+                with open(self.file) as f:
+                    words = list((executor.submit(lambda: (line.rstrip(line[-1:]) for line in f.readlines()))).result())
+                    words_sorted = (executor.submit(lambda: sorted(words, key=len, reverse=False))).result()
+                    return tuple(words_sorted)
+        except FileNotFoundError as err:
+            print(err)
+
+    def get_anagrams(self, word):
+        """ Optimized the search process of O(n) iteration.
+            Trade-safe method using instance level lock
+            6176 is count of len(w) == len('plates')
+            13173 is an index of the sorted list by length (self.words),where the block of words with length of 6 ends
+            45486 is the number of the words in the file, the size of self.words
+        """
+        with self.lock:
+            sorted_word = sorted(word)
+            length_word = len(word)
+            words = []
+            for w in self.words:
+                if len(w) < length_word:
+                    continue
+                elif len(w) == length_word:
+                    if sorted(w) == sorted_word:
+                        words.append(w)
+                    else:
+                        continue
+                else:  # len(w) > length_word: for example word 'plates' - makes (6176 + 13173) iterations out of 45406
+                    break
+            return words
+
+
+class TestAnagrams(unittest.TestCase):
+    """Unittest cases for Anagrams class """
+
+    def setUp(self):
+        self.anagrams = Anagrams()
+        self.file_content = mock_open(
+            read_data=(
+                'firstline\n'
+                'secondline\n'
+                'thirdline\n'
+            )
+        )
+
+    def test__get_words(self):
+        """ Testing get_words method using mock file """
+        with patch('builtins.open', self.file_content):
+            expected = ('firstline', 'thirdline', 'secondline')
+            actual = self.anagrams._get_words()
+            self.assertEqual(expected, actual)
+
+    def test_anagrams(self):
+        """ Testing anagram logic """
+        self.assertEqual(self.anagrams.get_anagrams('plates'), ['palest', 'pastel', 'petals', 'plates', 'staple'])
+        self.assertEqual(self.anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
+        self.assertEqual(self.anagrams.get_anagrams('nameless'), ['lameness', 'maleness', 'nameless', 'salesmen'])
+        self.assertEqual(self.anagrams.get_anagrams('trainers'),
+                         ['restrain', 'retrains', 'strainer', 'terrains', 'trainers'])
+        self.assertEqual(self.anagrams.get_anagrams('caters'),
+                         ['caster', 'caters', 'crates', 'reacts', 'recast', 'traces'])
+        self.assertEqual(self.anagrams.get_anagrams('pears'),
+                         ['pares', 'parse', 'pears', 'rapes', 'reaps', 'spare', 'spear'])
+
+    def test_thread_safe(self):
+        """ Testing the instance method get_anagram of Anagrams class, if it is a thread-safe  """
+        test_cases = {'pears': ['pares', 'parse', 'pears', 'rapes', 'reaps', 'spare', 'spear'],
+                      'caters': ['caster', 'caters', 'crates', 'reacts', 'recast', 'traces'],
+                      'trainers': ['restrain', 'retrains', 'strainer', 'terrains', 'trainers'],
+                      'nameless': ['lameness', 'maleness', 'nameless', 'salesmen'],
+                      'eat': ['ate', 'eat', 'tea'],
+                      'plates': ['palest', 'pastel', 'petals', 'plates', 'staple'],
+                      }
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            for test in test_cases.items():
+                future = pool.submit(self.anagrams.get_anagrams, test[0])
+                self.assertEqual(test[1], future.result())
+
+
+if __name__ == '__main__':
+    unittest.main()

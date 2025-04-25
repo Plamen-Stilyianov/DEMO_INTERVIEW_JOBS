@@ -1,0 +1,23 @@
+import pytest
+
+"""
+Task: Replicate product multiplication, without using  3 * 4 = 12, or numpy.prod
+"""
+
+def prod(a, b):
+    pr_sum = sum([abs(a) for _ in range(abs(b))])
+    return pr_sum if (a > 0 and b > 0) or (a < 0 and b < 0) else -pr_sum
+
+@pytest.mark.parametrize("a,b, expected",
+                         [(3, 4, 12),
+                          (-3, -4, 12),
+                          (-3, 4, -12),
+                          (3, -4, -12),
+                          ]
+                         )
+def test_prod(a, b, expected):
+    assert prod(a, b) == expected
+
+
+if __name__ == '__main__':
+    pytest.main([__file__])
