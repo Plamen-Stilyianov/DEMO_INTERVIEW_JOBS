@@ -1,14 +1,15 @@
-def insertionSort(alist):  # function that insertsorts through the list
+def insertionSort(alist):  # function that insert sorts through the list
+
     for index in range(1, len(alist)):
 
-        currentvalue = alist[index]
+        current_value = alist[index]
         position = index
 
-        while position > 0 and alist[position - 1] > currentvalue:
+        while position > 0 and alist[position - 1] > current_value:
             alist[position] = alist[position - 1]
             position = position - 1
 
-        alist[position] = currentvalue
+        alist[position] = current_value
 
 
 def run():
