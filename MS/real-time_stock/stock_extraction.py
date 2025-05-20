@@ -26,12 +26,11 @@ def extract_prices(data: Union[List, SupportsFloat, SupportsInt]) -> List[Any]:
     prices = []
     if isinstance(data, (SupportsInt, SupportsFloat)):
         prices.append(data)
-        return prices
+
 
     if isinstance(data, List):
         for item in data:
             prices.extend(extract_prices(item))
-        return prices
 
     return prices
 

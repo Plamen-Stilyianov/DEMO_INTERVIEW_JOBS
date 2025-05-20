@@ -11,7 +11,7 @@ import threading
 import unittest
 from multiprocessing.pool import ThreadPool
 
-from mock import patch, mock_open
+from unittest.mock import patch, mock_open
 
 
 class Anagrams(object):

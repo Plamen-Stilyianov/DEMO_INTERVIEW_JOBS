@@ -1,4 +1,6 @@
-class Base:
+from abc import ABCMeta
+
+class Base(metaclass=ABCMeta):
     # simply allow additional args in base class
     def hello(self, name, *args, **kwargs):
         print("Hello", name)
