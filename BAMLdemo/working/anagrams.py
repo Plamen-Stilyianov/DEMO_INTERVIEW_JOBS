@@ -22,8 +22,8 @@ class TestAnagrams(unittest.TestCase):
 
     def test_anagrams(self):
         anagrams = Anagrams()
-        self.assertEquals(anagrams.get_anagrams('plates'), ['palest', 'pastel', 'petals', 'plates', 'staple'])
-        self.assertEquals(anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
+        self.assertEqual(anagrams.get_anagrams('plates'), ['palest', 'pastel', 'petals', 'plates', 'staple'])
+        self.assertEqual(anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
 
 
 if __name__ == '__main__':

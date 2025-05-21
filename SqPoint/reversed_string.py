@@ -1,7 +1,7 @@
 import pytest
 
 
-def reversed_string(s):
+def reversed_string(s: str) -> str:
     if "." in s:
         l_words = []
         words = s.split('. ')
@@ -17,7 +17,7 @@ def reversed_string(s):
 
 @pytest.mark.parametrize("s, expected",
                          [("Hello Python. Hello Java", "Java Hello Python Hello"), ("Hello World", "World Hello"), ])
-def test_reversed_string(s, expected):
+def test_reversed_string(s: str, expected: str) -> None:
     assert reversed_string(s) == expected
 
 

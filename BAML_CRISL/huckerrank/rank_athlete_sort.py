@@ -1,14 +1,9 @@
-import math
-import os
-import random
-import re
-import sys
-
+# Sorted by fifth element k=5, and print the matrix
 
 def run(data, k):
-    # print(k)
     data.sort(key=lambda x: x[k])
-    [print(*x) for x in data]
+    for x in data:
+        print(*x, end='\n')
 
 
 if __name__ == '__main__':

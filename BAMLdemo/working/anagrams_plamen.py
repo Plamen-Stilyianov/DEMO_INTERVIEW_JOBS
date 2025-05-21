@@ -37,12 +37,12 @@ class TestAnagrams(unittest.TestCase):
 
     def test_anagrams(self):
         anagrams = Anagrams()
-        self.assertEquals(anagrams.get_anagrams('plates'), ['palest', 'pastel', 'petals', 'plates', 'staple'])
-        self.assertEquals(anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
-        self.assertEquals(anagrams.get_anagrams('nameless'), ['lameness', 'maleness', 'nameless', 'salesmen'])
-        self.assertEquals(anagrams.get_anagrams('trainers'), ['restrain', 'retrains', 'strainer', 'terrains', 'trainers'])
-        self.assertEquals(anagrams.get_anagrams('caters'), ['caster', 'caters', 'crates', 'reacts', 'recast', 'traces'])
-        self.assertEquals(anagrams.get_anagrams('pears'), ['pares', 'parse', 'pears', 'rapes', 'reaps', 'spare', 'spear'])
+        self.assertEqual(anagrams.get_anagrams('plates'), ['palest', 'pastel', 'petals', 'plates', 'staple'])
+        self.assertEqual(anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
+        self.assertEqual(anagrams.get_anagrams('nameless'), ['lameness', 'maleness', 'nameless', 'salesmen'])
+        self.assertEqual(anagrams.get_anagrams('trainers'), ['restrain', 'retrains', 'strainer', 'terrains', 'trainers'])
+        self.assertEqual(anagrams.get_anagrams('caters'), ['caster', 'caters', 'crates', 'reacts', 'recast', 'traces'])
+        self.assertEqual(anagrams.get_anagrams('pears'), ['pares', 'parse', 'pears', 'rapes', 'reaps', 'spare', 'spear'])
 
 
 if __name__ == '__main__':

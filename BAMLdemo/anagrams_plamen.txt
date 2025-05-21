@@ -77,14 +77,14 @@ class TestAnagrams(unittest.TestCase):
 
     def test_anagrams(self):
         """ Testing anagram logic """
-        self.assertEquals(self.anagrams.get_anagrams('plates'), ['palest', 'pastel', 'petals', 'plates', 'staple'])
-        self.assertEquals(self.anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
-        self.assertEquals(self.anagrams.get_anagrams('nameless'), ['lameness', 'maleness', 'nameless', 'salesmen'])
-        self.assertEquals(self.anagrams.get_anagrams('trainers'),
+        self.assertEqual(self.anagrams.get_anagrams('plates'), ['palest', 'pastel', 'petals', 'plates', 'staple'])
+        self.assertEqual(self.anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
+        self.assertEqual(self.anagrams.get_anagrams('nameless'), ['lameness', 'maleness', 'nameless', 'salesmen'])
+        self.assertEqual(self.anagrams.get_anagrams('trainers'),
                           ['restrain', 'retrains', 'strainer', 'terrains', 'trainers'])
-        self.assertEquals(self.anagrams.get_anagrams('caters'),
+        self.assertEqual(self.anagrams.get_anagrams('caters'),
                           ['caster', 'caters', 'crates', 'reacts', 'recast', 'traces'])
-        self.assertEquals(self.anagrams.get_anagrams('pears'),
+        self.assertEqual(self.anagrams.get_anagrams('pears'),
                           ['pares', 'parse', 'pears', 'rapes', 'reaps', 'spare', 'spear'])
 
     def test_thread_safe(self):
@@ -98,7 +98,7 @@ class TestAnagrams(unittest.TestCase):
         with ThreadPoolExecutor(max_workers=5) as pool:
             for test in test_cases.items():
                 future = pool.submit(self.anagrams.get_anagrams, test[0])
-                self.assertEquals(test[1], future.result())
+                self.assertEqual(test[1], future.result())
 
 
 if __name__ == '__main__':
